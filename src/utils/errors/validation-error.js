@@ -1,6 +1,6 @@
-const {StatusCodes} = require('http-status-codes')
+const { StatusCodes } = require('http-status-codes')
 class ValidationError extends Error {
-    constructor(error){
+    constructor(error) {
         super();
         let explanation = [];
         error.errors.forEach((err) => {
@@ -9,7 +9,7 @@ class ValidationError extends Error {
         this.name = 'ValidationError';
         this.message = 'Not able to validate the data sent in the request';
         this.explanation = explanation;
-        this.statusCodes = StatusCodes.BAD_REQUEST;
+        this.statusCode = StatusCodes.BAD_REQUEST
     }
 }
 
