@@ -1,7 +1,7 @@
 const {StatusCodes} = require('http-status-codes');
 
 const {Booking} = require('../models/index');
-const { AppError,ValiditionError} = require('../utils/errors/index');
+const { AppError,ValidationError} = require('../utils/errors/index');
 
 class BookingRepository{
     async create(data){
